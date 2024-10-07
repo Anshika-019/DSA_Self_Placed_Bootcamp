@@ -1,4 +1,4 @@
-package Recursion;
+package recursion;
 
 public class  Fibo {
     public static void main(String[] args) {
