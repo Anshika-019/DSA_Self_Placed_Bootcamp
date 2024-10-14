@@ -1,11 +1,14 @@
 package backtracking;
 
+import java.util.ArrayList;
+
 public class Maze {
     public static void main(String[] args) {
         // write a function that calculates the number of paths in a maze
 
         System.out.println(countPaths(3, 3));
-        path("", 3, 3);
+//        path("", 3, 3);
+        System.out.println(pathRet("", 3, 3));
 
 
     }
@@ -18,16 +21,19 @@ public class Maze {
         return left + right;
     }
 
-    static void path(String p, int r, int c){
+    static ArrayList<String> pathRet(String p, int r, int c){
         if(r == 1 && c == 1){
-            System.out.println(p);
-            return;
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
         }
+        ArrayList<String> list = new ArrayList<>();
         if(r > 1){
-            path(p + "D", r - 1, c);
+            list.addAll(pathRet(p + "D", r - 1, c));
         }
         if(c > 1){
-            path(p + "R", r, c - 1);
+            list.addAll(pathRet(p + "R", r, c - 1));
         }
+        return list;
     }
 }
