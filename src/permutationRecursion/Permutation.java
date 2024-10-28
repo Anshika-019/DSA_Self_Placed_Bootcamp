@@ -1,4 +1,4 @@
-package PermutationRecursion;
+package permutationRecursion;
 
 public class Permutation {
     public static void main(String[] args) {
