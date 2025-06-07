@@ -7,7 +7,7 @@ public class BST {
        private Node left;
          private Node right;
 
-          public Node(int value){
+          public Node(int value){ // contracture
                 this.value=value;
                 this.height=1;
           }
